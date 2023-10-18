@@ -1,0 +1,25 @@
+{
+    "name": "lawenvy-password-manager",
+    "version": "0.0.1",
+    "description": "A CLI to manage your passwords",
+    "main": "index.js",
+    "scripts": {
+        "dev": "ts-node ./src/main.ts"
+    },
+    "keywords": [],
+    "author": "Joshua William",
+    "license": "ISC",
+    "dependencies": {
+        "@inquirer/prompts": "^3.2.0",
+        "crypto-js": "^4.1.1",
+        "dayjs": "^1.11.10",
+        "figlet": "^1.6.0",
+        "nanospinner": "^1.1.0",
+        "sequelize": "^6.33.0",
+        "sqlite3": "^5.1.6"
+    },
+    "devDependencies": {
+        "@types/crypto-js": "^4.1.2",
+        "@types/figlet": "^1.5.7"
+    }
+}
