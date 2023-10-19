@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import figlet from "figlet";
 import User from "./data/models/User";
 import { input, password, select } from "@inquirer/prompts";

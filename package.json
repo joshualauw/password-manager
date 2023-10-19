@@ -11,9 +11,15 @@
     "bin": {
         "jpm": "./dist/main.js"
     },
-    "keywords": [],
+    "keywords": [
+        "cli",
+        "npmtool",
+        "password-manager"
+    ],
     "author": "Joshua William",
     "license": "ISC",
+    "repository": "https://github.com/joshualauw/password-manager",
+    "homepage": "https://github.com/joshualauw/password-manager#readme",
     "dependencies": {
         "@inquirer/prompts": "^3.2.0",
         "crypto-js": "^4.1.1",
