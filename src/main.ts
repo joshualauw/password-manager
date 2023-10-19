@@ -1,9 +1,9 @@
 import figlet from "figlet";
+import User from "./data/models/User";
 import { input, password, select } from "@inquirer/prompts";
 import { connDB } from "./data/db";
 import { validate } from "./utils/validate";
 import { createPasswordPrompt } from "./prompts/create-password";
-import User from "./data/models/User";
 import { getUser } from "./utils/getUser";
 import { viewPasswordPrompt } from "./prompts/view-password";
 import { updateUser } from "./prompts/update-user";

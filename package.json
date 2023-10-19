@@ -4,7 +4,12 @@
     "description": "A CLI to manage your passwords",
     "main": "index.js",
     "scripts": {
-        "dev": "ts-node ./src/main.ts"
+        "dev": "ts-node ./src/main.ts",
+        "start": "node ./dist/main.js",
+        "build": "tsc"
+    },
+    "bin": {
+        "jpm": "./dist/main.js"
     },
     "keywords": [],
     "author": "Joshua William",
@@ -20,6 +25,9 @@
     },
     "devDependencies": {
         "@types/crypto-js": "^4.1.2",
-        "@types/figlet": "^1.5.7"
+        "@types/figlet": "^1.5.7",
+        "ts-node": "^10.9.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.2.2"
     }
 }
