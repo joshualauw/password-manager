@@ -1,5 +1,5 @@
 {
-    "name": "lawenvy-password-manager",
+    "name": "@joshualauw/password-manager",
     "version": "0.0.1",
     "description": "A CLI to manage your passwords",
     "main": "index.js",

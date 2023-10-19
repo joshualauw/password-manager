@@ -4,6 +4,8 @@ import Password from "../data/models/Password";
 import decrypt from "../encryption/decrypt";
 import dayjs from "dayjs";
 import { validate } from "../utils/validate";
+import { updatePassword } from "./update-password";
+import { deletePassword } from "./delete-password";
 
 export async function detailPasswordPrompt(label: string) {
     const user = await getUser();
@@ -21,7 +23,7 @@ export async function detailPasswordPrompt(label: string) {
     console.log("Key: " + _password.getDataValue("key"));
     console.log("Value: " + decrypt(_password.getDataValue("value"), masterPassword));
     console.log("Created at: " + dayjs(_password.getDataValue("createdAt")).format("DD-MM-YYYY HH:mm"));
-    console.log("Updated at: " + dayjs(_password.getDataValue("createdAt")).format("DD-MM-YYYY HH:mm"));
+    console.log("Updated at: " + dayjs(_password.getDataValue("updatedAt")).format("DD-MM-YYYY HH:mm"));
 
     console.log("");
     const choice = await select({
@@ -35,8 +37,10 @@ export async function detailPasswordPrompt(label: string) {
 
     switch (choice) {
         case "update":
+            await updatePassword(_password.getDataValue("id"));
             break;
         case "delete":
+            await deletePassword(_password.getDataValue("id"));
             break;
     }
 }

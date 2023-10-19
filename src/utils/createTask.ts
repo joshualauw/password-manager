@@ -7,6 +7,6 @@ export async function createTask(task: Function) {
         setTimeout(() => {
             spinner.success();
             resolve(true);
-        }, 2000);
+        }, 1000);
     });
 }

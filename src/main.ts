@@ -6,6 +6,7 @@ import { createPasswordPrompt } from "./prompts/create-password";
 import User from "./data/models/User";
 import { getUser } from "./utils/getUser";
 import { viewPasswordPrompt } from "./prompts/view-password";
+import { updateUser } from "./prompts/update-user";
 
 connDB().then(async () => {
     await checkMasterPassword();
@@ -25,6 +26,7 @@ async function mainPrompt() {
         choices: [
             { name: "1. View Password", value: "view" },
             { name: "2. Create Password", value: "create" },
+            { name: "3. Update Profile", value: "profile" },
             { name: "0. Exit", value: "exit" },
         ],
     });
@@ -36,7 +38,8 @@ async function mainPrompt() {
         case "create":
             await createPasswordPrompt();
             break;
-        case "master":
+        case "profile":
+            await updateUser();
             break;
         default:
             process.exit(0);
